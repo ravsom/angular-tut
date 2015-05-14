@@ -1,0 +1,15 @@
+{
+  "name": "angulartutorial",
+  "version": "0.0.1",
+  "description": "temp tutorial for learning angular",
+  "main": "server.js",
+  "repository": "git",
+  "author": "Ravi Somayaji <ravikanth.somayaji@gmail.com",
+  "dependencies": {
+    "async": "~0.2.8",
+    "express": "~4.12.3",
+    "consolidate": "~0.10.0",
+    "handlebars": "~3.0.3",
+    "html": "0.0.10"
+  }
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/angular.min.js"></script>
+  <title>Hello</title>
+ </head>
+ <body ng-app="myapp" ng-init="countries=[{locale:'en-US',name:'United States'},
+                                           {locale:'en-GB',name:'United Kingdom'},
+                                           {locale:'en-FR',name:'France'}]">
+       <div ng-controller="HelloController" >
+             <h2>Welcome {{helloTo.title}}, to the world of Tutorialspoint!</h2>
+             <p>Enter your Name: <input type="text" ng-model="name"></p>
+             <p>Hello <span ng-bind="name"></span>!</p>
+             <ol>
+              <li ng-repeat="country in countries">
+                {{'Country: ' + country.name + ', Locale: ' + country.locale}}               
+              </li>
+             </ol>
+       </div>
+       <script>
+         angular.module("myapp", []).controller("HelloController", function($scope) {
+           $scope.helloTo = {};
+           $scope.helloTo.title = "AngularJS";
+         });
+       </script>
+ </body>
+</html>
